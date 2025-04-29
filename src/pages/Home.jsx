@@ -5,6 +5,8 @@ import Packages from '../components/Package'
 import HeroSection from '../components/HeroSection'
 import Testimonials from '../components/Testimonials'
 import FAQ from '../components/Faqs'
+import CTASection from '../components/CTA'
+
 
 const Home = () => {
   return (
@@ -12,9 +14,11 @@ const Home = () => {
       <HeroSection/>
       <Services/>
       <GalleryPreview/>
+      <CTASection/>
       <Packages/>
       <Testimonials/>
       <FAQ/>
+      
     </div>
   )
 }

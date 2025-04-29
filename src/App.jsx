@@ -13,6 +13,7 @@ import FamilyPackage from './pages/FamilyPackage';
 import FashionPackage from './pages/FashionPackage';
 import BabyPackage from './pages/BabyPackage';
 import About from './pages/About';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 function App() {
   return (
@@ -32,9 +33,12 @@ function App() {
             <Route path="fashionpackage" element={<FashionPackage/>}/>
             <Route path="babypackage" element={<BabyPackage/>}/>
             <Route path="about" element={<About/>}/>
+            <Route path="floating" element={<FloatingWhatsApp/>}/>
           </Routes>
-        </main>
 
+         
+        </main>
+       
         <Footer />
       </div>
     </Router>

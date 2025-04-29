@@ -12,10 +12,10 @@ function Portfolio() {
           , []);
   const [open, setOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [category, setCategory] = useState("Weddings");
+  const [category, setCategory] = useState("Lifestyle");
 
   const galleries = {
-    Weddings: [
+    Lifestyle: [
       { src: "assets/images/2.jpeg", alt: "Bride and groom first dance", title: "Wedding - First Dance" },
       { src: "assets/images/k1.jpg", alt: "Outdoor wedding ceremony", title: "Wedding - Outdoor Ceremony" },
       { src: "assets/images/3.jpeg", alt: "Wedding couple portrait", title: "Wedding - Couple Portrait" },
@@ -23,7 +23,7 @@ function Portfolio() {
       { src: "assets/images/w4.jpg", alt: "Bride getting ready", title: "Wedding - Bride Getting Ready" },
       { src: "assets/images/6.jpeg", alt: "Bride getting ready", title: "Wedding - Bride Getting Ready" },
     ],
-    Portraits: [
+    Community: [
       { src: "assets/images/4.jpeg", alt: "Woman portrait in natural light", title: "Portrait - Natural Light" },
       { src: "assets/images/po4.jpeg", alt: "Man stylish portrait", title: "Portrait - Stylish Mood" },
       { src: "assets/images/c2.jpg", alt: "Family portrait outdoors", title: "Portrait - Family Outdoors" },
@@ -31,7 +31,7 @@ function Portfolio() {
       { src: "assets/images/c1.jpg", alt: "Couple portrait in the city", title: "Portrait - City Vibes" },
      
     ],
-    Coperate: [
+    Corporate: [
       { src: "assets/images/9.jpeg", alt: "Product shoot for jewelry", title: "Commercial - Jewelry Product" },
       { src: "assets/images/chu1.jpg", alt: "Brand promotional shoot", title: "Commercial - Brand Promo" },
       
@@ -97,14 +97,17 @@ function Portfolio() {
         <Lightbox
           open={open}
           close={() => setOpen(false)}
-          slides={currentGallery}
+          slides={currentGallery.map(image => ({ src: image.src }))}
           index={currentIndex}
         />
       )}
 
       {/* Video Section */}
       <div className="mt-20 text-center">
-        <h3 className="text-3xl font-bold text-gray-800 mb-8">Video Portfolio</h3>
+        <h3 className="text-4xl font-bold text-indigo-800 mb-4">Visuals that Inspire</h3>
+        <p className="text-gray-600 text-lg mb-8">
+          Experience the art of storytelling through our curated video collection. 
+        </p>
         <div className="grid md:grid-cols-2 gap-8">
           {/* Video 1 */}
           <div className="overflow-hidden rounded-2xl shadow-lg">
@@ -113,6 +116,9 @@ function Portfolio() {
               controls 
               className="w-full h-auto rounded-2xl"
               preload="metadata"
+              muted
+              loop
+              playsInline
             />
           </div>
 
@@ -123,9 +129,26 @@ function Portfolio() {
               controls 
               className="w-full h-auto rounded-2xl"
               preload="metadata"
+              muted
+              loop
+              playsInline
             />
           </div>
+          <div className="overflow-hidden rounded-2xl shadow-lg">
+          <video 
+              src="assets/videos/investment.mp4" 
+              controls 
+              className="w-full h-auto rounded-2xl"
+              preload="metadata"
+              muted
+              loop
+              playsInline
+            />
+
+          </div>
+          
         </div>
+
       </div>
 
     </section>

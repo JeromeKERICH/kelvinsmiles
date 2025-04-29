@@ -1,14 +1,6 @@
-import { Link } from "react-router-dom";
-import { FaArrowDown } from "react-icons/fa";
 import { useState } from "react";
-import "./styles/Hero.css"; // Ensure this CSS file exists
 
-const HeroSection = () => {
-  const scrollToNextSection = () => {
-    const next = document.getElementById("next-section");
-    if (next) next.scrollIntoView({ behavior: "smooth" });
-  };
-
+const CTASection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -17,7 +9,7 @@ const HeroSection = () => {
     message: "",
   });
 
-  const phoneNumber = "254729325584";
+  const phoneNumber = "254729325584"; // Your WhatsApp number
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,59 +21,37 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="hero-section">
-      <video
-        className="background-video"
-        src="/assets/videos/coparate.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-      />
-      <div className="overlay" />
+    <section className="bg-indigo-600 text-white py-16 px-[4%] md:px-[10%] text-center relative">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">Let’s Capture Something Beautiful Together</h2>
+      <p className="mb-8 text-lg text-indigo-100">
+        Tell me what you need, and I’ll help bring your vision to life.
+      </p>
+      <button
+        onClick={() => setIsOpen(true)}
+        className="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition"
+      >
+        Request a Session
+      </button>
 
-      <div className="hero-content">
-        <h1 className="hero-title">
-          Capturing Moments. Telling Stories. Creating Impact.
-        </h1>
-        <p className="hero-subtitle">
-          Every frame tells a story of love, purpose, and human connection...
-        </p>
-
-        <div className="hero-buttons">
-          <Link to="/portfolio" className="hero-button portfolio-btn">
-            Explore Our Work
-          </Link>
-          <button
-            className="hero-button contact-btn"
-            onClick={() => setIsOpen(true)}
-          >
-            Book a Session
-          </button>
-        </div>
-
-        <button onClick={scrollToNextSection} className="scroll-down">
-          <FaArrowDown />
-        </button>
-      </div>
-
+      {/* Modal */}
       {isOpen && (
-        <div className="modal-overlay">
-          <div className="modal-box">
-            <h3 className="modal-title">Session Request</h3>
-            <form onSubmit={handleSubmit} className="modal-form">
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center px-4">
+          <div className="bg-white w-full max-w-md rounded-2xl p-6 shadow-xl relative">
+            <h3 className="text-xl font-semibold mb-4 text-gray-800">Session Request</h3>
+            <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
                 placeholder="Your Name"
                 required
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
+                className="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-md text-gray-800"
               />
               <select
                 required
                 value={form.service}
                 onChange={(e) => setForm({ ...form, service: e.target.value })}
+                className="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-md text-gray-800"
               >
                 <option value="" disabled>Select a service</option>
                 <option value="Wedding Photography">Wedding Photography</option>
@@ -96,18 +66,29 @@ const HeroSection = () => {
                 required
                 value={form.date}
                 onChange={(e) => setForm({ ...form, date: e.target.value })}
+                className="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-md text-gray-800"
               />
               <input
                 type="text"
                 placeholder="Optional Message"
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
+                className="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-md text-gray-800"
               />
-              <div className="modal-buttons">
-                <button type="button" onClick={() => setIsOpen(false)}>
+              <div className="flex justify-end gap-3">
+                <button
+                  type="button"
+                  onClick={() => setIsOpen(false)}
+                  className="text-gray-600 hover:text-red-600 transition"
+                >
                   Cancel
                 </button>
-                <button type="submit">Send via WhatsApp</button>
+                <button
+                  type="submit"
+                  className="bg-indigo-600 text-white px-5 py-2 rounded-md hover:bg-indigo-700 transition"
+                >
+                  Send via WhatsApp
+                </button>
               </div>
             </form>
           </div>
@@ -117,4 +98,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default CTASection;

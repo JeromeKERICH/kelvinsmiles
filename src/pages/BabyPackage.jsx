@@ -31,8 +31,7 @@ function BabyPackage() {
 
       <div className="max-w-5xl mx-auto px-[4%] md:px-[10%] py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">What You’ll Receive</h2>
-          <p className="text-gray-600 text-lg">
+        <p className="text-gray-800 text-lg">
             Wholesome memories of your little one's biggest days.
           </p>
         </div>

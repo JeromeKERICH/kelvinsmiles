@@ -43,7 +43,7 @@ function Packages() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-[4%] md:px-[10%] py-20">
+    <section className="bg-gray-100 max-w-7xl mx-auto px-[4%] md:px-[10%] py-20">
       <div className="text-center mb-12">
         <h2 className="text-indigo-700 text-2xl sm:text-4xl md:text-4xl font-bold mb-7 text-center">My best plans for you</h2>
         <p className="text-gray-600 text-lg">
