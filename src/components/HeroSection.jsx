@@ -30,9 +30,9 @@ const HeroSection = () => {
 
   return (
     <section className="hero-section">
-      <video
-        className="background-video"
-        src="/assets/videos/coparate.mp4"
+      <img
+        className="background-image"
+        src="/assets/images/back11.jpeg"
         autoPlay
         loop
         muted
@@ -43,10 +43,11 @@ const HeroSection = () => {
 
       <div className="hero-content">
         <h1 className="hero-title">
-          Capturing Moments. Telling Stories. Creating Impact.
+          Capturing Moments. <br/>
+          <span>Telling Stories. Creating Impact.</span>
         </h1>
         <p className="hero-subtitle">
-          Every frame tells a story of love, purpose, and human connection...
+          Every frame tells a story of love, purpose, and human connection. We make every shoot count
         </p>
 
         <div className="hero-buttons">
@@ -93,6 +94,7 @@ const HeroSection = () => {
               </select>
               <input
                 type="date"
+                placeholder="Preferred Date"
                 required
                 value={form.date}
                 onChange={(e) => setForm({ ...form, date: e.target.value })}

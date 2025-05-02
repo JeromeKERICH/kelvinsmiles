@@ -1,14 +1,14 @@
 // src/components/Services.jsx
-import { Camera, Video, PenTool, Sparkles, Film } from "lucide-react"; // or use react-icons if you want
+import { Camera, Video, PenTool, Sparkles, Film, Edit2Icon } from "lucide-react"; // or use react-icons if you want
+import { IconsManifest } from "react-icons";
+import { PiBrandy, PiBrandyLight } from "react-icons/pi";
 
 function Services() {
   return (
     <section className="bg-gray-100 max-w-7xl mx-auto px-[4%] md:px-[10%] py-16">
       <div className="text-center mb-12">
-        <h2 className="text-indigo-700 text-2xl sm:text-4xl md:text-4xl font-bold mb-7 text-center">Capture your Story with Purpose and Emotion.</h2>
-        <p className="text-gray-600 text-lg">
-          Beyond photography and film. We capture emotions, craft legacies, and tell unforgettable stories.
-        </p>
+        <h2 className="text-indigo-600 text-2xl sm:text-4xl md:text-4xl font-bold mb-7 text-center">Capture your Story with Purpose and Emotion.</h2>
+        
       </div>
 
       <div className="grid md:grid-cols-3 gap-12 text-center">
@@ -18,7 +18,7 @@ function Services() {
           <Camera size={48} className="text-indigo-600" />
           <h3 className="text-xl font-semibold text-gray-800">Timeless Photography</h3>
           <p className="text-gray-600">
-            From fleeting smiles to bold adventures, we capture real, raw, human moments that live forever.
+            From fleeting smiles to bold adventures, we capture real, raw, human moments that live forever. 
           </p>
         </div>
 
@@ -42,7 +42,7 @@ function Services() {
 
         {/* Personal Branding Shoots */}
         <div className="flex flex-col items-center space-y-4">
-            <Sparkles size={48} className="text-indigo-600" />
+            <PiBrandyLight size={48} className="text-indigo-600" />
             <h3 className="text-xl font-semibold text-gray-800">Personal Branding Shoots</h3>
             <p className="text-gray-600">
                 Elevate your brand with visuals that reflect your unique identity, passion, and professionalism.
@@ -61,7 +61,7 @@ function Services() {
         
 
         <div className="flex flex-col items-center space-y-4">
-            <PenTool size={48} className="text-indigo-600" />
+            <Edit2Icon size={48} className="text-indigo-600" />
             <h3 className="text-xl font-semibold text-gray-800">Photo Editing & Video Post-Production</h3>
             <p className="text-gray-600">
                 Transforming raw captures into polished masterpieces, ensuring every detail shines with perfection.

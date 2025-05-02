@@ -2,7 +2,7 @@
 import { FaWhatsapp } from "react-icons/fa";
 
 const FloatingWhatsApp = () => {
-  const phoneNumber = "254712345678"; // replace with Kevin's actual number
+  const phoneNumber = "254729325584"; // Replace with your phone number
 
   return (
     <a

@@ -15,7 +15,7 @@ const faqs = [
   {
     question: "How long does it take to receive photos or videos?",
     answer:
-      "Typically, photos are delivered within 1–2 weeks, and video projects within 3–4 weeks. Expedited delivery is available upon request.",
+      "Typically, photos are delivered within 1–2 days, and video projects within 1 weeks. Expedited delivery is available upon request.",
   },
   {
     question: "Can I customize a package?",

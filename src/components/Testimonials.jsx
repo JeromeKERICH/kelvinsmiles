@@ -4,7 +4,7 @@ const testimonials = [
       role: "Bride | Nairobi",
       image: "/assets/testimonials/joy.jpg",
       quote:
-        "Kevin didn't just capture our wedding — he captured every emotion. We laughed, cried, and now we relive it every time we look at our photos.",
+        "Kevin didn't just capture our wedding, he captured every emotion. We laughed, cried, and now we relive it every time we look at our photos. ",
     },
     {
       name: "Mark Otieno",
@@ -16,7 +16,7 @@ const testimonials = [
     {
       name: "Aisha Mwende",
       role: "Program Officer | NGO Kenya",
-      image: "/assets/testimonials/aisha.jpg",
+     
       quote:
         "We hired Kevin for a community impact project. He told stories that touched hearts, not just ticked boxes. We’ll work with him again!",
     },
@@ -27,9 +27,6 @@ const testimonials = [
       <section className="bg-gray-100 py-20 px-[4%] md:px-[10%]">
         <div className="text-center mb-12">
           <h2 className="text-indigo-700 text-2xl sm:text-4xl md:text-4xl font-bold mb-4">What Clients Say</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Real moments. Real people. Here’s what they had to say.
-          </p>
         </div>
   
         <div className="grid gap-8 md:grid-cols-3">
@@ -39,12 +36,7 @@ const testimonials = [
               className="bg-white p-8 rounded-2xl shadow-md hover:shadow-lg transition duration-300"
             >
               <div className="flex items-center gap-4 mb-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-14 h-14 rounded-full object-cover"
-                  loading="lazy"
-                />
+               
                 <div>
                   <h4 className="text-lg font-semibold">{testimonial.name}</h4>
                   <p className="text-sm text-gray-500">{testimonial.role}</p>
